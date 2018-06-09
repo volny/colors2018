@@ -52,6 +52,7 @@ form {
   top: 0;
   left: 0;
   cursor: pointer;
+  z-index: 2;
 }
 
 .select_close {display: none}
@@ -70,12 +71,14 @@ form {
   position: absolute;
   top: 0;
   left: 0;
-  border: 2px solid #2fb5d1;
+  border: 2px solid #b8b8b8;
   border-radius: 2px;
   padding-top: 40px;
 }
 
-.select_input {display: none}
+.select_input {
+  display: none
+}
 
 .select_label {
   transition: all 250ms cubic-bezier(.4,.25,.3,1);
@@ -104,15 +107,25 @@ form {
   display: block;
 }
 
+.select_options {
+  z-index: 1;
+}
+
 .select_expand:checked + .select_closeLabel + .select_options .select_label {
   height: 40px;
 }
 
-.select_expand:checked + .select_closeLabel + .select_options .select_label:hover {background-color: #f7f7f7}
+.select_expand:checked + .select_closeLabel + .select_options .select_label:hover {
+  background-color: #f7f7f7
+}
 
-.select_expand:checked + .select_closeLabel + .select_options + .select_expandLabel {display: none}
+.select_expand:checked + .select_closeLabel + .select_options + .select_expandLabel {
+  display: none
+}
 
 .select_input:checked + .select_label {
-  height: 40px;
-  margin-top: -40px;
+  /* we don't want the selection to take over the placeholder spot */
+  /* height: 40px; */
+  /* margin-top: -40px; */
+  display: none;
 }

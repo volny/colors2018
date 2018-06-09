@@ -26,6 +26,10 @@ header {
   margin: 10px 0;
 }
 
+.selector {
+  margin: 10px 0 14px 0;
+}
+
 .colorscheme-img {
   width: 100%;
 }
@@ -43,12 +47,17 @@ header {
 
   header {
     flex-direction: column;
-    padding: 30% 10px;
+    justify-content: center;
+    padding: 0 10px;
   }
 
   .heading {
     width: 170px;
-    margin: 0 30px;
+    margin: 10px 30px;
+  }
+
+  .selector {
+    margin: 10px 30px;
   }
 
 }
