@@ -81,6 +81,35 @@ const updateColors = (targets, palette) => {
     box.setAttribute('data-clipboard-text', color)
   })
 
+  // UPDATE SELECT OPTIONS
+
+  var options = document.querySelector('.select_options')
+  while (options.firstChild) {
+    options.removeChild(options.firstChild);
+  }
+
+  const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
+  const choices = Object.keys(data).filter(p => p !== palette)
+  const children = choices.map(c => {
+    const listItem = document.createElement('li')
+    listItem.className = 'select_option'
+    const input = document.createElement('input')
+    input.className = 'select_input'
+    input.type = 'radio'
+    input.name = 'awesomeness'
+    input.id = c
+    const label = document.createElement('label')
+    label.className = 'select_label'
+    label.setAttribute('for', c)
+    label.innerHTML = c.split('-').map(a => capitalize(a)).join(' ')
+    listItem.appendChild(input)
+    listItem.appendChild(label)
+    return listItem
+  })
+  children.forEach(child => {
+    options.appendChild(child)
+  })
+
 }
 
 document.addEventListener('DOMContentLoaded', e => {
