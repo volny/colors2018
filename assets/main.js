@@ -16,6 +16,24 @@ const data = {
     'color13': '#7cafc2',
     'color14': '#ba8baf',
     'color15': '#a16946',
+  },
+  'solarized': {
+    'color0': '#002b36',
+    'color1': '#073642',
+    'color2': '#586e75',
+    'color3': '#657b83',
+    'color4': '#839496',
+    'color5': '#93a1a1',
+    'color6': '#eee8d5',
+    'color7': '#fdf6e3',
+    'color8': '#b58900',
+    'color9': '#cb4b16',
+    'color10': '#dc322f',
+    'color11': '#d33682',
+    'color12': '#6c71c4',
+    'color13': '#268bd2',
+    'color14': '#2aa198',
+    'color15': '#859900',
   }
 }
 
@@ -47,4 +65,14 @@ document.addEventListener('DOMContentLoaded', e => {
       console.error('Trigger:', event.trigger);
   });
 
+  document.querySelector('.select_options').addEventListener('click', event => {
+    if (event.target.id) {
+      console.log(event.target.id)
+      updateColors(colorsBoxes, event.target.id)
+    }
+  })
+
 })
+
+
+

@@ -1,15 +1,5 @@
-form {
-  width: 100%;
-  height: 100%;
-  padding-bottom: 75px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: radial-gradient(at top, #b5e6cf, #9dddad);
-}
-
 .select {
-  width: 225px;
+  width: 203px;
   height: 40px;
   cursor: pointer;
   background-color: white;
@@ -32,7 +22,7 @@ form {
   right: 0;
   -webkit-transform: translate(-50%, -50%) rotate(90deg) scaleY(1.75);
   transform: translate(-50%, -50%) rotate(90deg) scaleY(1.75);
-  color: #3e3e3e;
+  color: #888888;
   font-size: 28px;
   pointer-events: none;
   z-index: 2;
@@ -71,7 +61,7 @@ form {
   position: absolute;
   top: 0;
   left: 0;
-  border: 2px solid #b8b8b8;
+  border: 2px solid #d8d8d8;
   border-radius: 2px;
   padding-top: 40px;
 }
