@@ -110,6 +110,7 @@ const updateColors = (targets, palette) => {
     options.appendChild(child)
   })
 
+
 }
 
 document.addEventListener('DOMContentLoaded', e => {
@@ -132,7 +133,34 @@ document.addEventListener('DOMContentLoaded', e => {
 
   document.querySelector('.select_options').addEventListener('click', event => {
     if (event.target.id) {
-      console.log(event.target.id)
+
+      // update logo
+
+      const logo = document.querySelector('.colorscheme-img')
+      const parent = logo.parentNode
+      logo.style.opacity = '0'
+      window.setTimeout(() => {
+        parent.removeChild(logo)
+      }, 250)
+      const newLogo = document.createElement('img')
+      const name = `static/${event.target.id}`
+      newLogo.src = `${name}.png`
+      newLogo.alt = name
+      newLogo.className = 'colorscheme-img'
+      newLogo.style.opacity = '0'
+      window.setTimeout(() => {
+        parent.appendChild(newLogo)
+        window.setTimeout(() => {
+          newLogo.style.opacity = '1'
+        }, 250)
+      }, 250)
+
+
+      // fade switch colors
+
+
+
+
       updateColors(colorsBoxes, event.target.id)
     }
   })
