@@ -7,7 +7,7 @@ body {
   width: 100vw;
   height: 100vh;
   grid-template-rows: auto 1fr 1fr 1fr 1fr;
-  grid-auto-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "header header header header"
     "color1 color2 color3 color4"
@@ -18,20 +18,27 @@ body {
 
 header {
   grid-area: header;
-  /* inside the header display flex, so we can change flex-direction */
-  /* grid-column: 1/1; */
-  /* grid-row: 1/1; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 15px;
 }
 
 @media (orientation: landscape) {
   .wrapper {
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-auto-columns: 1fr 1fr 1fr 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr auto;
     grid-template-areas:
       "color1 color2 color3 color4 header"
       "color5 color6 color7 color8 header"
       "color9 color10 color11 color12 header"
       "color13 color14 color15 color16 header";
+  }
+
+  header {
+    flex-direction: column;
+    padding: 30% 10px;
+    align-items: center;
   }
 }
 
