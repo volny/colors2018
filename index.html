@@ -4,23 +4,51 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>UI Colors</title>
-    <link rel="stylesheet" href="main.css" type="text/css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.6.1/animate.min.css">
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-    <script src="main.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="assets/reset.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="assets/grid.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="assets/select.css" type="text/css" media="screen" charset="utf-8">
+    <script src="assets/main.js" charset="utf-8"></script>
   </head>
   <body>
     <div class="wrapper">
       <header>
         <div class="heading">
-          <img src="images/base16.png" alt="Base16" class="colorscheme-img"/>
+          <img src="static/base16.png" alt="Base16" class="colorscheme-img"/>
         </div>
         <div class="selector">
-          <select name="palette-selector" id="paletteSelector" size="1">
-            <option value="base16">Base 16</option>
-            <option value="solarized">Solarized</option>
-            <option value="gruvbox">Gruvbox</option>
-          </select>
+
+            <ul class="select">
+              <li>
+                <input class="select_close" type="radio" name="awesomeness" id="awesomeness-close" value=""/>
+                <span class="select_label select_label-placeholder">Awesomeness Level</span>
+              </li>
+              <li class="select_items">
+                <input class="select_expand" type="radio" name="awesomeness" id="awesomeness-opener"/>
+                <label class="select_closeLabel" for="awesomeness-close"></label>
+                <ul class="select_options">
+                  <li class="select_option">
+                    <input class="select_input" type="radio" name="awesomeness" id="awesomeness-ridiculous"/>
+                    <label class="select_label" for="awesomeness-ridiculous">ridiculous</label>
+                  </li>
+                  <li class="select_option">
+                    <input class="select_input" type="radio" name="awesomeness" id="awesomeness-reasonable"/>
+                    <label class="select_label" for="awesomeness-reasonable">reasonable</label>
+                  </li>
+                  <li class="select_option">
+                    <input class="select_input" type="radio" name="awesomeness" id="awesomeness-lacking"/>
+                    <label class="select_label" for="awesomeness-lacking">lacking</label>
+                  </li>
+                  <li class="select_option">
+                    <input class="select_input" type="radio" name="awesomeness" id="awesomeness-awesomeless"/>
+                    <label class="select_label" for="awesomeness-awesomeless">awesomeless</label>
+                  </li>
+                </ul>
+                <label class="select_expandLabel" for="awesomeness-opener"></label>
+              </li>
+            </ul>
+
         </div>
       </header>
       <section class="color"></section>
