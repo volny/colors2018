@@ -22,6 +22,16 @@ header {
   flex-direction: row;
   justify-content: space-between;
   padding: 0 15px;
+  align-items: center;
+}
+
+.heading {
+  width: 100px;
+  margin: 10px 0;
+}
+
+.colorscheme-img {
+  width: 100%;
 }
 
 @media (orientation: landscape) {
@@ -38,8 +48,13 @@ header {
   header {
     flex-direction: column;
     padding: 30% 10px;
-    align-items: center;
   }
+
+  .heading {
+    width: 170px;
+    margin: 0 30px;
+  }
+
 }
 
 .color:nth-child(2) {
