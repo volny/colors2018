@@ -119,3 +119,24 @@
   /* margin-top: -40px; */
   display: none;
 }
+
+@media (max-width: 400px) {
+  .selector {
+    margin: 0 0 14px 0;
+  }
+
+  .select {
+    height: 30px;
+    width: 150px;
+  }
+
+  .select_label {
+    font-size: 1rem;
+    padding-left: 8px;
+  }
+
+
+  .select_expand::after {
+    font-size: 20px;
+  }
+}
