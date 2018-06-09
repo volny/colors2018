@@ -6,8 +6,14 @@ body {
   display: grid;
   width: 100vw;
   height: 100vh;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: auto 4fr;
   grid-auto-columns: 1fr;
+}
+
+header {
+  /* inside the header display flex, so we can change flex-direction */
+  /* grid-column: 1/1; */
+  /* grid-row: 1/1; */
 }
 
 main {
@@ -19,8 +25,14 @@ main {
 @media (orientation: landscape) {
   .wrapper {
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 4fr auto;
   }
+
+  header {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
 }
 
 .color:nth-child(1) {
