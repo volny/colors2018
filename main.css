@@ -6,95 +6,111 @@ body {
   display: grid;
   width: 100vw;
   height: 100vh;
-  grid-template-rows: auto 4fr;
-  grid-auto-columns: 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header header"
+    "color1 color2 color3 color4"
+    "color5 color6 color7 color8"
+    "color9 color10 color11 color12"
+    "color13 color14 color15 color16";
 }
 
 header {
+  grid-area: header;
   /* inside the header display flex, so we can change flex-direction */
   /* grid-column: 1/1; */
   /* grid-row: 1/1; */
 }
 
-main {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
 @media (orientation: landscape) {
   .wrapper {
-    grid-template-rows: 1fr;
-    grid-template-columns: 4fr auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr 1fr 1fr 1fr auto;
+    grid-template-areas:
+      "color1 color2 color3 color4 header"
+      "color5 color6 color7 color8 header"
+      "color9 color10 color11 color12 header"
+      "color13 color14 color15 color16 header";
   }
-
-  header {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-}
-
-.color:nth-child(1) {
-  background: #1abc9c;
 }
 
 .color:nth-child(2) {
-  background: #16a085;
+  grid-area: color1;
+  background: #1abc9c;
 }
 
 .color:nth-child(3) {
-  background: #2ecc71;
+  grid-area: color2;
+  background: #16a085;
 }
 
 .color:nth-child(4) {
-  background: #27ae60;
+  grid-area: color3;
+  background: #2ecc71;
 }
 
 .color:nth-child(5) {
-  background: #3498db;
+  grid-area: color4;
+  background: #27ae60;
 }
 
 .color:nth-child(6) {
-  background: #2980b9;
+  grid-area: color5;
+  background: #3498db;
 }
 
 .color:nth-child(7) {
-  background: #9b59b6;
+  grid-area: color6;
+  background: #2980b9;
 }
 
 .color:nth-child(8) {
-  background: #8e44ad;
+  grid-area: color7;
+  background: #9b59b6;
 }
 
 .color:nth-child(9) {
-  background: #34495e;
+  grid-area: color8;
+  background: #8e44ad;
 }
 
 .color:nth-child(10) {
-  background: #2c3e50;
+  grid-area: color9;
+  background: #34495e;
 }
 
 .color:nth-child(11) {
-  background: #f1c40f;
+  grid-area: color10;
+  background: #2c3e50;
 }
 
 .color:nth-child(12) {
-  background: #f39c12;
+  grid-area: color11;
+  background: #f1c40f;
 }
 
 .color:nth-child(13) {
-  background: #e67e22;
+  grid-area: color12;
+  background: #f39c12;
 }
 
 .color:nth-child(14) {
-  background: #d35400;
+  grid-area: color13;
+  background: #e67e22;
 }
 
 .color:nth-child(15) {
-  background: #e74c3c;
+  grid-area: color14;
+  background: #d35400;
 }
 
 .color:nth-child(16) {
+  grid-area: color15;
+  background: #e74c3c;
+}
+
+.color:nth-child(17) {
+  grid-area: color16;
   background: #c0392b;
 }
