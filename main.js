@@ -19,13 +19,27 @@ const colors = {
   }
 }
 
-document.addEventListener("DOMContentLoaded", e => {
+document.addEventListener('DOMContentLoaded', e => {
+  console.log('dom content laoded');
   const colorsBoxes = document.querySelectorAll('.color')
   colorsBoxes.forEach((box, i) => {
     const color = colors.base16[`color${i}`]
     box.style.background = color
     box.setAttribute('data-clipboard-text', color)
   })
+
+  const clipboard = new ClipboardJS(colorsBoxes)
+  clipboard.on('success', (event) => {
+      const confirmation = document.createElement('div')
+      confirmation.className = 'fullscreen'
+      confirmation.innerHTML = `<div class="inner animated tada"><p class="message" style="color: ${event.text};">copied</p></div>`
+      document.body.appendChild(confirmation)
+      window.setTimeout(() => document.body.removeChild(confirmation), 700)
+      event.clearSelection();
+  });
+  clipboard.on('error', (event) => {
+      console.error('Action:', event.action);
+      console.error('Trigger:', event.trigger);
+  });
+
 })
-
-
