@@ -119,13 +119,23 @@ document.addEventListener('DOMContentLoaded', e => {
   updateColors(colorsBoxes, 'base16')
   const clipboard = new ClipboardJS(colorsBoxes)
   clipboard.on('success', event => {
-    console.log('copied', event.text)
-    // const confirmation = document.createElement('div')
-    // confirmation.className = 'fullscreen'
-    // confirmation.innerHTML = `<div class="inner animated tada"><p class="message" style="color: ${event.text};">copied</p></div>`
-    // document.body.appendChild(confirmation)
-    // window.setTimeout(() => document.body.removeChild(confirmation), 700)
-    // event.clearSelection();
+    const confirm = document.createElement('div')
+    confirm.className = 'confirmation'
+    confirm.innerHTML = `copied ${event.text}`
+    confirm.style.opacity = '0'
+    confirm.style['font-size'] = '30px'
+    window.setTimeout(() => {
+      confirm.style.opacity = '1'
+      confirm.style['font-size'] = '50px'
+      confirm.style.background = event.text
+    }, 0)
+
+
+    document.querySelector('body').appendChild(confirm)
+    window.setTimeout(() => {
+      document.querySelector('body').removeChild(confirm)
+    }, 1250)
+    event.clearSelection();
   })
   clipboard.on('error', event => {
     console.error('Action:', event.action)
@@ -134,7 +144,6 @@ document.addEventListener('DOMContentLoaded', e => {
 
   document.querySelector('.select_options').addEventListener('click', event => {
     if (event.target.id) {
-      // update logo
       const logo = document.querySelector('.colorscheme-img')
       const parent = logo.parentNode
       logo.style.opacity = '0'
@@ -153,8 +162,6 @@ document.addEventListener('DOMContentLoaded', e => {
       window.setTimeout(() => {
         newLogo.style.opacity = '1'
       }, 0)
-
-      // fade switch colors
 
       updateColors(colorsBoxes, event.target.id)
     }

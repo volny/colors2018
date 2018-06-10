@@ -37,6 +37,20 @@ header {
   margin: 10px 0 14px 0;
 }
 
+.confirmation {
+  align-items: center;
+  color: #ffffff;
+  display: flex;
+  font-weight: 700;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 1s ease-in-out;
+  width: 100vw;
+}
+
 
 @media (orientation: landscape) {
   .wrapper {
