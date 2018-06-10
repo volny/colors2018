@@ -1,14 +1,14 @@
 /*------------∞
 |  reset.css  |
 ∞------------*/
-  /* ∞∞ postcss ∞∞ */
+/* ∞∞ postcss ∞∞ */
 
-  /* ∞∞ font ∞∞ */
-  @import url(https://fonts.googleapis.com/css?family=Lato:300,900);
-  body {
-    font-family: 'Lato', sans-serif;
-  }
-  /* ∞∞ global ∞∞ */
+/* ∞∞ font ∞∞ */
+@import url(https://fonts.googleapis.com/css?family=Lato:300,900);
+body {
+  font-family: "Lato", sans-serif;
+}
+/* ∞∞ global ∞∞ */
 * {
   position: relative;
   margin: 0;
@@ -31,7 +31,17 @@ body {
 }
 
 /* ∞∞ text styling ∞∞ */
-h1, h2, h3, h4, h5, h6, p, em, a, b, strong {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+em,
+a,
+b,
+strong {
   font-style: normal;
   font-weight: 300;
 }
@@ -41,7 +51,7 @@ strong {
 }
 
 small {
-  font-size: .85em;
+  font-size: 0.85em;
 }
 
 ul,
@@ -52,7 +62,7 @@ menu {
 
 sub,
 sup {
-  font-size: .75em;
+  font-size: 0.75em;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -149,123 +159,122 @@ background-color: #49e;
 height: .35rem;
 } */
 
-  /* ∞∞ hr using box ∞∞ */
-  hr {
-    border: none;
-    box-sizing: border-box;
-    height: .075rem;
-  }
+/* ∞∞ hr using box ∞∞ */
+hr {
+  border: none;
+  box-sizing: border-box;
+  height: 0.075rem;
+}
 
-  /* ∞∞ hidden ∞∞ */
-  [hidden],
-  template {
-    display: none;
-  }
+/* ∞∞ hidden ∞∞ */
+[hidden],
+template {
+  display: none;
+}
 
-  /* ∞∞ media specific ∞∞ */
-  audio:not([controls]) {
-    display: none;
-    height: 0;
-  }
+/* ∞∞ media specific ∞∞ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
 
-  /* ∞∞ tables ∞∞ */
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    border: none;
-  }
+/* ∞∞ tables ∞∞ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+}
 
-  td,
-  th {
-    margin: 0;
-    padding: 0;
-    font-weight: inherit;
-    text-align: inherit;
-  }
+td,
+th {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  text-align: inherit;
+}
 
+/*====================================================== ∞∞ browser specific ∞∞ */
 
-  /*====================================================== ∞∞ browser specific ∞∞ */
+/* ∞∞ IE ∞∞ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
 
-  /* ∞∞ IE ∞∞ */
-  article,
-  aside,
-  details,
-  figcaption,
-  figure,
-  footer,
-  header,
-  main,
-  menu,
-  nav,
-  section,
-  summary {
-    display: block;
-  }
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
 
-  audio,
-  canvas,
-  progress,
-  video {
-    display: inline-block;
-    vertical-align: baseline;
-  }
+a {
+  background-color: transparent;
+}
 
-  a {
-    background-color: transparent;
-  }
+button {
+  overflow: visible;
+}
 
-  button {
-    overflow: visible;
-  }
+html {
+  -ms-text-size-adjust: 100%;
+}
 
-  html {
-    -ms-text-size-adjust: 100%;
-  }
+img {
+  border: none;
+}
 
-  img {
-    border: none;
-  }
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
 
-  input[type="checkbox"],
-  input[type="radio"] {
-    box-sizing: border-box;
-    padding: 0;
-  }
+legend {
+  border: none;
+  padding: 0;
+}
 
-  legend {
-    border: none;
-    padding: 0;
-  }
+mark {
+  background: #ff0;
+  color: #000;
+}
 
-  mark {
-    background: #ff0;
-    color: #000;
-  }
+svg:not(:root) {
+  overflow: hidden;
+}
 
-  svg:not(:root) {
-    overflow: hidden;
-  }
+textarea {
+  overflow: auto;
+}
 
-  textarea {
-    overflow: auto;
-  }
+/* ∞∞ moz ∞∞ */
+body {
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  /* ∞∞ moz ∞∞ */
-  body {
-    -moz-osx-font-smoothing: grayscale;
-  }
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
 
-  button::-moz-focus-inner,
-  input::-moz-focus-inner {
-    border: none;
-    padding: 0;
-  }
+input {
+  line-height: normal;
+}
 
-  input {
-    line-height: normal;
-  }
-
-  /* ∞∞ webkit ∞∞ */
+/* ∞∞ webkit ∞∞ */
 * {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
@@ -295,10 +304,10 @@ fieldset {
   -webkit-padding-after: 0;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
   height: auto;
 }
 
@@ -311,5 +320,3 @@ input[type="search"]::-webkit-search-decoration,
 progress {
   -webkit-appearance: none;
 }
-
-
