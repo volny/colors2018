@@ -135,25 +135,24 @@ document.addEventListener('DOMContentLoaded', e => {
   document.querySelector('.select_options').addEventListener('click', event => {
     if (event.target.id) {
       // update logo
-
       const logo = document.querySelector('.colorscheme-img')
       const parent = logo.parentNode
       logo.style.opacity = '0'
       window.setTimeout(() => {
         parent.removeChild(logo)
       }, 250)
+
       const newLogo = document.createElement('img')
       const name = `static/${event.target.id}`
       newLogo.src = `${name}.png`
       newLogo.alt = name
       newLogo.className = 'colorscheme-img'
       newLogo.style.opacity = '0'
+
+      parent.appendChild(newLogo)
       window.setTimeout(() => {
-        parent.appendChild(newLogo)
-        window.setTimeout(() => {
-          newLogo.style.opacity = '1'
-        }, 250)
-      }, 250)
+        newLogo.style.opacity = '1'
+      }, 0)
 
       // fade switch colors
 
